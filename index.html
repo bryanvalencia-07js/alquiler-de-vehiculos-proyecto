@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clientes</title>
+  <link rel="stylesheet" href="admin.css"> 
+</head>
+<body>
+
+<h2>Gestión de Clientes</h2>
+
+<form id="formCliente">
+  <input type="text" id="nombre" placeholder="Nombre" required>
+  <input type="text" id="cedula" placeholder="Cédula" required>
+  <input type="text" id="telefono" placeholder="Teléfono">
+  <input type="email" id="correo" placeholder="Correo">
+  <input type="text" id="licencia" placeholder="Licencia">
+
+  <select id="tipo" required>
+    <option value="">Tipo de cliente</option>
+    <option value="frecuente">Frecuente</option>
+    <option value="nuevo">Nuevo</option>
+  </select>
+
+  <select id="departamento" required></select>
+  <select id="municipio" required></select>
+  <select id="barrio" required></select>
+
+  <button type="submit">Guardar</button>
+</form>
+
+<h3>Lista de Clientes</h3>
+<ul id="listaClientes"></ul>
+
+<!-- ENV (tus datos) -->
+<script src="env.js"></script>
+
+<!-- TU SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
