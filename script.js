@@ -1,21 +1,9 @@
-// =====================
-// DATOS (YA LOS TIENES EN TU ENV)
-// =====================
-// DEPARTAMENTOS
-// MUNICIPIOS
-// BARRIOS
 
-
-// =====================
-// VARIABLES
-// =====================
 let clientes = JSON.parse(localStorage.getItem("clientes")) || [];
 let editandoIndex = null;
 
 
-// =====================
-// CARGAR DEPARTAMENTOS
-// =====================
+
 function cargarDepartamentos() {
   const select = document.getElementById("departamento");
 
@@ -32,9 +20,7 @@ function cargarDepartamentos() {
 }
 
 
-// =====================
-// CARGAR MUNICIPIOS
-// =====================
+
 function cargarMunicipios(idDep) {
   const selectMunicipio = document.getElementById("municipio");
   const selectBarrio = document.getElementById("barrio");
@@ -57,9 +43,7 @@ function cargarMunicipios(idDep) {
 }
 
 
-// =====================
-// CARGAR BARRIOS
-// =====================
+
 function cargarBarrios(idMun) {
   const selectBarrio = document.getElementById("barrio");
 
@@ -80,7 +64,7 @@ function cargarBarrios(idMun) {
     selectBarrio.appendChild(option);
   });
 
-  // 🔥 FORZAR VISUALIZACIÓN (SOLUCIÓN CLAVE)
+  
   if (barriosFiltrados.length > 0) {
     selectBarrio.size = Math.min(8, barriosFiltrados.length);
   } else {
@@ -88,9 +72,7 @@ function cargarBarrios(idMun) {
   }
 }
 
-// =====================
-// EVENTOS SELECT
-// =====================
+
 document.getElementById("departamento").addEventListener("change", function () {
   cargarMunicipios(Number(this.value));
 });
@@ -100,9 +82,7 @@ document.getElementById("municipio").addEventListener("change", function () {
 });
 
 
-// =====================
-// GUARDAR CLIENTE
-// =====================
+
 document.getElementById("formCliente").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -132,9 +112,7 @@ document.getElementById("formCliente").addEventListener("submit", function (e) {
 });
 
 
-// =====================
-// MOSTRAR CLIENTES
-// =====================
+
 function mostrarClientes() {
   const lista = document.getElementById("listaClientes");
   lista.innerHTML = "";
@@ -153,9 +131,7 @@ function mostrarClientes() {
 }
 
 
-// =====================
-// EDITAR CLIENTE
-// =====================
+
 function editarCliente(index) {
   const c = clientes[index];
   editandoIndex = index;
@@ -167,25 +143,23 @@ function editarCliente(index) {
   document.getElementById("licencia").value = c.licencia;
   document.getElementById("tipo").value = c.tipo;
 
-  // Departamento
+  
   document.getElementById("departamento").value = c.departamento;
   cargarMunicipios(Number(c.departamento));
 
-  // Municipio
+  
   const selectMunicipio = document.getElementById("municipio");
   selectMunicipio.value = c.municipio;
 
-  // 🔥 FORZAR CARGA DE BARRIOS (SIN depender de eventos)
+  
   cargarBarrios(c.municipio);
 
-  // Barrio
+  
   document.getElementById("barrio").value = c.barrio;
 }
 
 
-// =====================
-// ELIMINAR CLIENTE
-// =====================
+
 function eliminarCliente(index) {
   clientes.splice(index, 1);
   localStorage.setItem("clientes", JSON.stringify(clientes));
@@ -193,8 +167,6 @@ function eliminarCliente(index) {
 }
 
 
-// =====================
-// INICIO
-// =====================
+
 cargarDepartamentos();
 mostrarClientes();
