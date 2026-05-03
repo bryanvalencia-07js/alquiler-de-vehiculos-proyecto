@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tecnomecánica</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <h2>Gestión de Tecnomecánica</h2>
+
+  <h3>Registrar Tecnomecánica</h3>
+
+  <form id="formTecnomecanica">
+    <input type="text" id="ordenServicio" placeholder="Orden de servicio" required>
+
+    <label for="fechaSolicitudMantenimiento">Fecha solicitud mantenimiento</label>
+    <input type="date" id="fechaSolicitudMantenimiento" required>
+
+    <select id="vehiculoTecnomecanica" required></select>
+
+    <input type="text" id="nombreTecnico" placeholder="Nombre del técnico" required>
+
+    <label for="fechaMantenimiento">Fecha mantenimiento</label>
+    <input type="date" id="fechaMantenimiento" required>
+
+    <select id="estadoTecnomecanica" required>
+      <option value="">Seleccione estado</option>
+      <option value="PR">PR - Programado</option>
+      <option value="MC">MC - Mantenimiento en Curso</option>
+      <option value="VE">VE - Vehículo Entregado</option>
+    </select>
+
+    <button type="submit">Guardar Tecnomecánica</button>
+  </form>
+
+  <ul id="listaTecnomecanicas"></ul>
+
+  <h3>Registrar Detalle de Tecnomecánica</h3>
+
+  <form id="formDetalleTecnomecanica">
+    <select id="tecnomecanicaDetalle" required></select>
+
+    <input type="text" id="actividad" placeholder="Código o tipo de actividad" required>
+
+    <input type="text" id="nombreActividad" placeholder="Nombre de la actividad" required>
+
+    <input type="text" id="evaluacionAnalisis" placeholder="Evaluación o análisis" required>
+
+    <label for="fechaActividad">Fecha actividad</label>
+    <input type="date" id="fechaActividad" required>
+
+    <button type="submit">Guardar Detalle</button>
+  </form>
+
+  <ul id="listaDetallesTecnomecanica"></ul>
+
+  <br>
+  <a href="index.html">← Volver a Clientes</a>
+  <br><br>
+  <a href="vehiculos.html">← Volver a Vehículos</a>
+
+<script src="catalogoVehiculos.js"></script>
+<script src="tecnomecanica.js"></script>
+</body>
+</html>

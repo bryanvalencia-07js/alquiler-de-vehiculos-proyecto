@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historial de Alquiler</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <h2>Gestión de Historial de Alquiler</h2>
+
+  <h3>Registrar Alquiler</h3>
+
+  <form id="formHistorial">
+    <input type="text" id="numeroPedido" placeholder="Número de pedido" required>
+
+    <label for="fechaEntregaVehiculo">Fecha entrega vehículo</label>
+    <input type="date" id="fechaEntregaVehiculo" required>
+
+    <label for="horaEntregaVehiculo">Hora entrega vehículo</label>
+    <input type="time" id="horaEntregaVehiculo" required>
+
+    <label for="fechaDevolucionVehiculo">Fecha devolución vehículo</label>
+    <input type="date" id="fechaDevolucionVehiculo" required>
+
+    <label for="horaDevolucionVehiculo">Hora devolución vehículo</label>
+    <input type="time" id="horaDevolucionVehiculo" required>
+
+    <select id="clienteAlquiler" required></select>
+
+    <select id="vehiculoAlquiler" required></select>
+
+    <input type="text" id="observacionesEmpresa" placeholder="Observaciones de la empresa">
+
+    <input type="text" id="observacionesEntregaCliente" placeholder="Observaciones entrega cliente">
+
+    <button type="submit">Guardar Historial</button>
+  </form>
+
+  <h3>Lista de Alquileres</h3>
+  <ul id="listaHistorial"></ul>
+
+  <br>
+  <a href="index.html">← Volver a Clientes</a>
+  <br><br>
+  <a href="vehiculos.html">← Volver a Vehículos</a>
+  <br><br>
+  <a href="tecnomecanica.html">← Volver a Tecnomecánica</a>
+
+  <script src="catalogoVehiculos.js"></script>
+  <script src="historial.js"></script></body>
+</html>

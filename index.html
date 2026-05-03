@@ -9,30 +9,44 @@
 
 <h2>Gestión de Clientes</h2>
 
-<form id="formCliente">
-  <input type="text" id="nombre" placeholder="Nombre" required>
-  <input type="text" id="cedula" placeholder="Cédula" required>
-  <input type="text" id="telefono" placeholder="Teléfono">
-  <input type="email" id="correo" placeholder="Correo">
-  <input type="text" id="licencia" placeholder="Licencia">
+<nav class="menu-navegacion">
+  <a href="index.html">Clientes</a>
+  <a href="vehiculos.html">Vehículos</a>
+  <a href="tecnomecanica.html">Tecnomecánica</a>
+  <a href="historial.html">Historial de Alquiler</a>
+</nav>
 
-  <select id="tipo" required>
-    <option value="">Tipo de cliente</option>
-    <option value="frecuente">Frecuente</option>
-    <option value="nuevo">Nuevo</option>
-  </select>
+<form id="formCliente">
+  <input type="text" id="cedula" placeholder="Cédula" required>
+
+  <input type="text" id="nombre" placeholder="Nombre completo" required>
+
+  <input type="text" id="direccion" placeholder="Dirección" required>
 
   <select id="departamento" required></select>
+
   <select id="municipio" required></select>
+
   <select id="barrio" required></select>
 
-  <button type="submit">Guardar</button>
+  <input type="text" id="whatsapp" placeholder="WhatsApp">
+
+  <input type="text" id="telefono" placeholder="Teléfono">
+
+  <input type="email" id="email" placeholder="Correo electrónico">
+
+  <input type="text" id="numeroLicenciaConduccion" placeholder="Número de licencia de conducción">
+
+  <input type="text" id="categoriaLicencia" placeholder="Categoría de licencia">
+
+  <label for="fechaVencimientoLicencia">Fecha vencimiento licencia</label>
+  <input type="date" id="fechaVencimientoLicencia">
+
+  <button type="submit">Guardar Cliente</button>
 </form>
 
 <h3>Lista de Clientes</h3>
 <ul id="listaClientes"></ul>
-
-
 
 <script src="env.js"></script>
 <script src="script.js"></script>

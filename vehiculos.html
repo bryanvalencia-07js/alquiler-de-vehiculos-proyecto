@@ -4,55 +4,58 @@
   <meta charset="UTF-8">
   <title>Vehículos</title>
   <link rel="stylesheet" href="admin.css">
-  <script src="vehiculos.js"></script>
 </head>
 <body>
 
-<h2>Gestión de Vehículos</h2>
+  <h2>Gestión de Vehículos</h2>
 
-<!-- 🔹 MARCAS -->
-<h3>Marcas</h3>
-<form id="formMarca">
-  <input type="text" id="nombreMarca" placeholder="Nombre de la marca" required>
-  <button type="submit">Agregar Marca</button>
-</form>
+  <h3>Marcas de Vehículos</h3>
+  <form id="formMarca">
+    <input type="text" id="codigoMarca" placeholder="Código de la marca" required>
+    <input type="text" id="nombreMarca" placeholder="Nombre de la marca" required>
+    <button type="submit">Guardar Marca</button>
+  </form>
 
-<ul id="listaMarcas"></ul>
+  <ul id="listaMarcas"></ul>
 
+  <h3>Categorías de Vehículos</h3>
+  <form id="formCategoria">
+    <input type="text" id="codigoCategoria" placeholder="Código de la categoría" required>
+    <input type="text" id="nombreCategoria" placeholder="Nombre de la categoría" required>
+    <input type="number" id="valorHoraAlquiler" placeholder="Valor hora alquiler" required>
+    <button type="submit">Guardar Categoría</button>
+  </form>
 
-<!-- 🔹 CATEGORÍAS -->
-<h3>Categorías</h3>
-<form id="formCategoria">
-  <input type="text" id="nombreCategoria" placeholder="Categoría (Ej: Moto, Carro)" required>
-  <button type="submit">Agregar Categoría</button>
-</form>
+  <ul id="listaCategorias"></ul>
 
-<ul id="listaCategorias"></ul>
+  <h3>Vehículos</h3>
+  <form id="formVehiculo">
+    <input type="text" id="placa" placeholder="Placa" required>
 
+    <select id="marca" required></select>
+    <select id="categoria" required></select>
 
-<!-- 🔹 VEHÍCULOS -->
-<h3>Vehículos</h3>
-<form id="formVehiculo">
-  <input type="text" id="placa" placeholder="Placa" required>
+    <input type="text" id="modelo" placeholder="Modelo" required>
+    <input type="text" id="snMotor" placeholder="Número serial del motor">
+    <input type="text" id="snChasis" placeholder="Número serial del chasis">
+    <input type="text" id="numeroSoat" placeholder="Número SOAT">
 
-  <select id="marca" required></select>
-  <select id="categoria" required></select>
+    <label for="fechaVencimientoSoat">Fecha vencimiento SOAT</label>
+    <input type="date" id="fechaVencimientoSoat">
 
-  <input type="text" id="modelo" placeholder="Modelo">
-  <input type="number" id="anio" placeholder="Año">
+    <input type="text" id="tarjetaPropiedad" placeholder="Tarjeta de propiedad">
+    <input type="number" id="capacidadPersonas" placeholder="Capacidad de personas">
+    <input type="text" id="idGPS" placeholder="ID GPS">
 
-  <button type="submit">Guardar Vehículo</button>
-</form>
+    <button type="submit">Guardar Vehículo</button>
+  </form>
 
-<ul id="listaVehiculos"></ul>
+  <ul id="listaVehiculos"></ul>
 
+  <br>
+  <a href="index.html">← Volver a Clientes</a>
 
-<!-- 🔹 NAVEGACIÓN -->
-<br>
-<a href="index.html">← Volver a Clientes</a>
-
-
-<script src="vehiculos.js"></script>
-
+  <script src="catalogoVehiculos.js"></script>
+  <script src="vehiculos.js"></script>
 </body>
 </html>
