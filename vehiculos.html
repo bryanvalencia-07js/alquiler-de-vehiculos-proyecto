@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehículos</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="vehiculos.js"></script>
+</head>
+<body>
+
+<h2>Gestión de Vehículos</h2>
+
+<!-- 🔹 MARCAS -->
+<h3>Marcas</h3>
+<form id="formMarca">
+  <input type="text" id="nombreMarca" placeholder="Nombre de la marca" required>
+  <button type="submit">Agregar Marca</button>
+</form>
+
+<ul id="listaMarcas"></ul>
+
+
+<!-- 🔹 CATEGORÍAS -->
+<h3>Categorías</h3>
+<form id="formCategoria">
+  <input type="text" id="nombreCategoria" placeholder="Categoría (Ej: Moto, Carro)" required>
+  <button type="submit">Agregar Categoría</button>
+</form>
+
+<ul id="listaCategorias"></ul>
+
+
+<!-- 🔹 VEHÍCULOS -->
+<h3>Vehículos</h3>
+<form id="formVehiculo">
+  <input type="text" id="placa" placeholder="Placa" required>
+
+  <select id="marca" required></select>
+  <select id="categoria" required></select>
+
+  <input type="text" id="modelo" placeholder="Modelo">
+  <input type="number" id="anio" placeholder="Año">
+
+  <button type="submit">Guardar Vehículo</button>
+</form>
+
+<ul id="listaVehiculos"></ul>
+
+
+<!-- 🔹 NAVEGACIÓN -->
+<br>
+<a href="index.html">← Volver a Clientes</a>
+
+
+<script src="vehiculos.js"></script>
+
+</body>
+</html>
