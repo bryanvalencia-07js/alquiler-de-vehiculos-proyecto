@@ -116,3 +116,11 @@ a {
 a:hover {
   color: #0056b3;
 }
+
+.menu-navegacion .btn-salir {
+  background: #dc3545;
+}
+
+.menu-navegacion .btn-salir:hover {
+  background: #b52a37;
+}
