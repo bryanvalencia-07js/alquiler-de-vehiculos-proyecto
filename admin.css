@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   background: #f4f6f9;
@@ -6,11 +7,14 @@ body {
   color: #333;
 }
 
+/* Títulos */
 h1, h2, h3 {
   text-align: center;
   color: #333;
+  font-family: Arial, sans-serif;
 }
 
+/* Menú de navegación */
 .menu-navegacion {
   text-align: center;
   margin-bottom: 25px;
@@ -25,12 +29,23 @@ h1, h2, h3 {
   margin: 5px;
   border-radius: 5px;
   font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 
 .menu-navegacion a:hover {
-  background: #0056b3;
+  background: #007bff;
 }
 
+/* Botón salir */
+.menu-navegacion .btn-salir {
+  background: #dc3545;
+}
+
+.menu-navegacion .btn-salir:hover {
+  background: #b52a37;
+}
+
+/* Formularios */
 form {
   background: white;
   padding: 20px;
@@ -44,6 +59,7 @@ label {
   font-weight: bold;
   display: block;
   margin-top: 10px;
+  font-family: Arial, sans-serif;
 }
 
 input, select {
@@ -53,8 +69,10 @@ input, select {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+/* Botones */
 button {
   background: #007bff;
   color: white;
@@ -63,12 +81,14 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 
 button:hover {
   background: #0056b3;
 }
 
+/* Listas */
 ul {
   max-width: 900px;
   margin: 0 auto 30px auto;
@@ -81,10 +101,12 @@ li {
   margin-bottom: 10px;
   padding: 12px;
   border-radius: 6px;
-  border-left: 5px solid #007bff;
+  border-left: 5px solid #0056b3;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
 }
 
+/* Botones dentro de listas */
 li button {
   width: auto;
   margin-left: 5px;
@@ -108,19 +130,45 @@ li button:last-of-type:hover {
   background: #b52a37;
 }
 
+/* Tablas */
+table {
+  width: 90%;
+  margin: 0 auto 30px auto;
+  background: white;
+  border-collapse: collapse;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+th {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Enlaces normales */
 a {
-  color: #007bff;
+  color: #0056b3;
   font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #003d80;
 }
 
-.menu-navegacion .btn-salir {
-  background: #dc3545;
+/* Mensajes */
+#mensaje {
+  text-align: center;
+  font-weight: bold;
 }
 
-.menu-navegacion .btn-salir:hover {
-  background: #b52a37;
+#rutaDestino {
+  text-align: center;
 }

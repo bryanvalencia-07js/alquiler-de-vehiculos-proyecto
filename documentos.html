@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cargar Documentos PDF</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <h2>Cargar Documentos PDF</h2>
+
+  <nav class="menu-navegacion">
+    <a href="index.html">Clientes</a>
+    <a href="vehiculos.html">Vehículos</a>
+    <a href="tecnomecanica.html">Tecnomecánica</a>
+    <a href="historial.html">Historial de Alquiler</a>
+    <a href="documentos.html">Documentos PDF</a>
+  </nav>
+
+  <form id="frmCarga">
+    <label for="txtCedula">Identificación</label>
+    <input 
+      type="text" 
+      id="txtCedula" 
+      placeholder="Digite identificación" 
+      minlength="8"
+      maxlength="10"
+      required
+    >
+
+    <label for="txtDocumento">Nombre del documento</label>
+    <input 
+      type="text" 
+      id="txtDocumento" 
+      placeholder="Aquí aparecerá el nombre del archivo" 
+      disabled
+    >
+
+    <button type="button" id="btnSeleccionarArchivo">Seleccionar PDF</button>
+
+    <button type="button" id="btnGuardar">Guardar Documento</button>
+
+    <p id="rutaDestino"></p>
+    <p id="mensaje"></p>
+  </form>
+
+  <h3>Listado de Documentos</h3>
+
+  <table id="tblDatos">
+    <thead>
+      <tr>
+        <th>Identificación</th>
+        <th>Documento</th>
+        <th>Estado Documento</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script type="module" src="./js/codigo.js"></script>
+</body>
+</html>
